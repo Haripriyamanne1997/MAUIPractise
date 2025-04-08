@@ -15,6 +15,8 @@ namespace MAUIFoodApplication
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Poppins-Regular.ttf", "Poppins");
+
                 });
 #if ANDROID
         builder.Services.AddSingleton<IDeviceService, MAUIFoodApplication.Platforms.Android.DeviceService>();

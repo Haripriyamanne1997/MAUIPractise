@@ -1,16 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIFoodApplication.MainPage">
+             x:Class="MAUIFoodApplication.MainPage"
+             BackgroundColor="White">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Padding="30,50"
+            Spacing="30">
 
-            <Label x:Name="DeviceLabel" Text="Loading...." FontSize="20" HorizontalOptions="Center"/>
+            <!-- Device Label -->
+            <Label x:Name="DeviceLabel"
+                   Text="Loading..."
+                   FontSize="22"
+                   FontFamily="Poppins"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
 
+            <!-- Welcome Text -->
+            <Label Text="Welcome to MAUI Food Application 🍽️"
+                   FontSize="28"
+                   FontFamily="Poppins"
+                   TextColor="#ffb452"
+                   HorizontalOptions="Center" />
+
+            <!--<Label Text="Welcome to MAUI Food Application 🍽️"
+         FontSize="28"
+         FontFamily="Poppins"
+         TextColor="{StaticResource Primary}"
+         HorizontalOptions="Center" />-->
+
+            <!-- Card-style Frame -->
+            <Frame BackgroundColor="#f9f9f9"
+                   CornerRadius="20"
+                   Padding="20"
+                   HasShadow="True">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="Sign In"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#444" />
+
+                    <!-- Rounded Email Entry -->
+                    <Frame CornerRadius="10"
+                           BackgroundColor="#eee"
+                           Padding="10"
+                           HasShadow="False"
+                           BorderColor="LightGray">
+                        <Entry Placeholder="Enter your email"
+                               BackgroundColor="Transparent"
+                               TextColor="Black" />
+                    </Frame>
+
+                    <!-- Rounded Password Entry -->
+                    <Frame CornerRadius="10"
+                           BackgroundColor="#eee"
+                           Padding="10"
+                           HasShadow="False"
+                           BorderColor="LightGray">
+                        <Entry Placeholder="Enter your password"
+                               IsPassword="True"
+                               BackgroundColor="Transparent"
+                               TextColor="Black" />
+                    </Frame>
+
+                    <!-- Login Button -->
+                    <Button Text="Login"
+                            BackgroundColor="#ffb452"
+                            TextColor="White"
+                            CornerRadius="12"
+                            FontSize="16" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+            <!--<BoxView WidthRequest="100" HeightRequest="5"
+Background="{StaticResource PrimaryBrush}" />-->
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
