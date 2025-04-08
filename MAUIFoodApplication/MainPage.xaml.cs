@@ -21,5 +21,10 @@ namespace MAUIFoodApplication
             await Navigation.PushAsync(new RegisterPage());
         }
 
+        private async void OnDeviceInformationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DeviceInformation());
+        }
+
     }
 }
