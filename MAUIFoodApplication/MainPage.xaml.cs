@@ -1,6 +1,7 @@
 ﻿using MAUIFoodApplication.Interfaces;
 using Microsoft.Maui.Controls;
 using Microsoft.Extensions.DependencyInjection; // Required for GetService
+using MAUIFoodApplication;
 
 namespace MAUIFoodApplication
 {
@@ -15,5 +16,10 @@ namespace MAUIFoodApplication
 
             DeviceLabel.Text = _deviceService.GetsPlatformName();
         }
+        private async void OnRegisterClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegisterPage());
+        }
+
     }
 }

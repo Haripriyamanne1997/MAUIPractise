@@ -72,8 +72,14 @@
                             TextColor="White"
                             CornerRadius="12"
                             FontSize="16" />
-
+                    <Button Text="Don't have an account? Register"
+BackgroundColor="Transparent"
+TextColor="#512BD4"
+FontAttributes="Bold"
+Clicked="OnRegisterClicked" />
                 </VerticalStackLayout>
+                <!-- Register Button -->
+               
 
             </Frame>
             <!--<BoxView WidthRequest="100" HeightRequest="5"
