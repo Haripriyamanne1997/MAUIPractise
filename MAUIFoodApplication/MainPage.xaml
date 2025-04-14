@@ -82,7 +82,14 @@
             BackgroundColor="Transparent"
             TextColor="#52fffc"
             FontAttributes="Bold"
-            Clicked="OnDeviceInformationClicked" />      
+            Clicked="OnDeviceInformationClicked" />
+
+
+                    <Button Text="Device Sensors"
+            BackgroundColor="Transparent"
+            TextColor="#52fffc"
+            FontAttributes="Bold"
+            Clicked="OnDeviceSensorsClicked" />
                 </VerticalStackLayout>
                 <!-- Register Button -->
 
