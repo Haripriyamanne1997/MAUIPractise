@@ -19,10 +19,15 @@ namespace MAUIFoodApplication
 
                 });
 #if ANDROID
-        builder.Services.AddSingleton<IDeviceService, MAUIFoodApplication.Platforms.Android.DeviceService>();
+    builder.Services.AddSingleton<IDeviceService, MAUIFoodApplication.Platforms.Android.DeviceService>();
+    builder.Services.AddSingleton<IPlatformService, MAUIFoodApplication.Platforms.Android.PlatformService>();
+#elif IOS
+            builder.Services.AddSingleton<IPlatformService, MAUIFoodApplication.Platforms.iOS.PlatformService>();
 #elif WINDOWS        
-            builder.Services.AddSingleton<IDeviceService, MAUIFoodApplication.Platforms.Windows.DeviceService>();
+    builder.Services.AddSingleton<IDeviceService, MAUIFoodApplication.Platforms.Windows.DeviceService>();
+    builder.Services.AddSingleton<IPlatformService, MAUIFoodApplication.Platforms.Windows.PlatformService>();
 #endif
+
             builder.Services.AddTransient<MainPage>();
 #if DEBUG
             builder.Logging.AddDebug();

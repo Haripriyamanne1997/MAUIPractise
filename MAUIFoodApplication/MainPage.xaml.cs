@@ -8,14 +8,16 @@ namespace MAUIFoodApplication
     public partial class MainPage : ContentPage
     {
         private readonly IDeviceService _deviceService;
+        private readonly IPlatformService _platformService;
 
-        public MainPage(IDeviceService deviceService)
+        public MainPage(IDeviceService deviceService,IPlatformService platformService)
         {
             InitializeComponent();
             _deviceService = deviceService;
-
             DeviceLabel.Text = _deviceService.GetsPlatformName();
+            _platformService = platformService;
         }
+       
         private async void OnRegisterClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());
@@ -29,7 +31,10 @@ namespace MAUIFoodApplication
         {
             await Navigation.PushAsync(new DeviceSensors());
         }
-        
+        private async void OnInvokePlatformCodeClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new InvokePlatformCode(_platformService));
+        }
 
     }
 }

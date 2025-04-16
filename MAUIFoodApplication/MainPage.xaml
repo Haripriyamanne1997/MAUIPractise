@@ -72,13 +72,13 @@
                             TextColor="White"
                             CornerRadius="12"
                             FontSize="16" />
-                            <Button Text="Don't have an account? Register"
+                    <Button Text="Don't have an account? Register"
             BackgroundColor="Transparent"
             TextColor="#512BD4"
             FontAttributes="Bold"
             Clicked="OnRegisterClicked" />
 
-                            <Button Text="Device Information"
+                    <Button Text="Device Information"
             BackgroundColor="Transparent"
             TextColor="#52fffc"
             FontAttributes="Bold"
@@ -87,10 +87,19 @@
 
                     <Button Text="Device Sensors"
             BackgroundColor="Transparent"
-            TextColor="#52fffc"
+            TextColor="DarkViolet"
             FontAttributes="Bold"
             Clicked="OnDeviceSensorsClicked" />
+
+                    <Button Text="InvokePlatformCode"
+                    BackgroundColor="Transparent"
+                    TextColor="#008000"
+                    FontAttributes="Bold"
+                    Clicked="OnInvokePlatformCodeClicked" />
                 </VerticalStackLayout>
+
+
+
                 <!-- Register Button -->
 
 
