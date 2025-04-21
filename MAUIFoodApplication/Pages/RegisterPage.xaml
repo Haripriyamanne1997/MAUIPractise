@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIFoodApplication.RegisterPage"
-             Title="Register"
-             BackgroundColor="White">
-
+             x:Class="MAUIFoodApplication.Pages.RegisterPage"
+             Title="RegisterPage">
     <ScrollView>
         <VerticalStackLayout Padding="30" Spacing="20">
 
@@ -16,31 +14,32 @@
 
             <!-- First Name -->
             <Frame CornerRadius="10" Padding="10" BackgroundColor="#eee" HasShadow="False" BorderColor="LightGray">
-                <Entry Placeholder="First Name" BackgroundColor="Transparent" TextColor="Black" />
+                <Entry x:Name="FirstNameEntry" Placeholder="First Name" BackgroundColor="Transparent" TextColor="Black" />
             </Frame>
 
             <!-- Last Name -->
             <Frame CornerRadius="10" Padding="10" BackgroundColor="#eee" HasShadow="False" BorderColor="LightGray">
-                <Entry Placeholder="Last Name" BackgroundColor="Transparent" TextColor="Black" />
+                <Entry x:Name="LastNameEntry" Placeholder="Last Name" BackgroundColor="Transparent" TextColor="Black" />
             </Frame>
 
             <!-- Email -->
             <Frame CornerRadius="10" Padding="10" BackgroundColor="#eee" HasShadow="False" BorderColor="LightGray">
-                <Entry Placeholder="Email" Keyboard="Email" BackgroundColor="Transparent" TextColor="Black" />
+                <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" BackgroundColor="Transparent" TextColor="Black" />
             </Frame>
 
             <!-- Password -->
             <Frame CornerRadius="10" Padding="10" BackgroundColor="#eee" HasShadow="False" BorderColor="LightGray">
-                <Entry Placeholder="Password" IsPassword="True" BackgroundColor="Transparent" TextColor="Black" />
+                <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" BackgroundColor="Transparent" TextColor="Black" />
             </Frame>
 
             <!-- Re-enter Password -->
             <Frame CornerRadius="10" Padding="10" BackgroundColor="#eee" HasShadow="False" BorderColor="LightGray">
-                <Entry Placeholder="Re-enter Password" IsPassword="True" BackgroundColor="Transparent" TextColor="Black" />
+                <Entry x:Name="ConfirmPasswordEntry" Placeholder="Re-enter Password" IsPassword="True" BackgroundColor="Transparent" TextColor="Black" />
             </Frame>
 
             <!-- Register Button -->
             <Button Text="Register"
+                    Clicked="OnRegisterClicked"
                     BackgroundColor="#ffb452"
                     TextColor="White"
                     CornerRadius="12"
