@@ -64,6 +64,13 @@
                             Clicked="OnInvokePlatformCodeClicked" />
 
                     <local:NativeLabel FontSize="20" TextColor="Blue" />
+                    <!-- Permissions Button -->
+                    <Button Text="Permissions"
+         BackgroundColor="Transparent"
+         TextColor="DarkViolet"
+         FontAttributes="Bold"
+         Clicked="OnPermissionsClicked" />
+
                 </VerticalStackLayout>
 
             </Frame>

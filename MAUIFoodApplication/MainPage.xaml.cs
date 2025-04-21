@@ -42,5 +42,11 @@ namespace MAUIFoodApplication
         {
             await Navigation.PushAsync(new InvokePlatformCode(_platformService));
         }
+
+        //Permission code
+        private async void OnPermissionsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PermissionPage());
+        }
     }
 }
