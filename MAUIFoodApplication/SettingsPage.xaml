@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIFoodApplication.SettingsPage"
+             Title="SettingsPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Username" FontAttributes="Bold"/>
+            <Entry x:Name="usernameEntry" Placeholder="Enter your name"/>
+            <Button Text="Save Username" Clicked="OnSaveUsernameClicked"/>
+
+            <Label Text="Theme" FontAttributes="Bold"/>
+            <Switch x:Name="themeSwitch" Toggled="OnThemeToggled"/>
+            <Label x:Name="themeLabel" />
+
+            <Label Text="Notifications" FontAttributes="Bold"/>
+            <Switch x:Name="notificationSwitch" Toggled="OnNotificationToggled"/>
+            <Label x:Name="notificationLabel" />
+
+            <Label Text="Preferred Language" FontAttributes="Bold"/>
+            <Picker x:Name="languagePicker" Title="Select language"
+                    SelectedIndexChanged="OnLanguageChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>English</x:String>
+                        <x:String>French</x:String>
+                        <x:String>Hindi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label x:Name="languageLabel" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

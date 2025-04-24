@@ -48,5 +48,17 @@ namespace MAUIFoodApplication
         {
             await Navigation.PushAsync(new PermissionPage());
         }
+
+        //Preferences
+        private async void OnPreferencesClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PreferencesPage());
+        }
+
+        //Settings Page
+        private async void OnSettingsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SettingsPage());
+        }
     }
 }

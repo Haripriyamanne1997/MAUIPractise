@@ -70,6 +70,20 @@
          TextColor="DarkViolet"
          FontAttributes="Bold"
          Clicked="OnPermissionsClicked" />
+                    
+                    <!--Preferences Button-->
+                    <Button Text="Preferences"
+BackgroundColor="Transparent"
+TextColor="Black"
+FontAttributes="Bold"
+Clicked="OnPreferencesClicked" />
+
+                    <!--Settings Button-->
+                    <Button Text="Settings"
+BackgroundColor="Transparent"
+TextColor="Black"
+FontAttributes="Bold"
+Clicked="OnSettingsClicked" />
 
                 </VerticalStackLayout>
 
