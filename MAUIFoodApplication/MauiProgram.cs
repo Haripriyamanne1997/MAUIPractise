@@ -1,5 +1,5 @@
 ﻿using MAUIFoodApplication.Interfaces;
-using MAUIFoodApplication.Platforms.Android.NativeViews;
+//using MAUIFoodApplication.Platforms.Android.NativeViews;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,12 +19,12 @@ namespace MAUIFoodApplication
                     fonts.AddFont("Poppins-Regular.ttf", "Poppins");
 
                 });
-#if ANDROID
-        builder.ConfigureMauiHandlers(handlers =>
-        {
-            handlers.AddHandler(typeof(NativeLabel), typeof(NativeTextViewHandler));
-        });
-#endif
+//#if ANDROID
+//        builder.ConfigureMauiHandlers(handlers =>
+//        {
+//            handlers.AddHandler(typeof(NativeLabel), typeof(NativeTextViewHandler));
+//        });
+//#endif
 #if ANDROID
     builder.Services.AddSingleton<IDeviceService, MAUIFoodApplication.Platforms.Android.DeviceService>();
     builder.Services.AddSingleton<IPlatformService, MAUIFoodApplication.Platforms.Android.PlatformService>();

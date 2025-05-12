@@ -10,13 +10,7 @@
             Padding="30,50"
             Spacing="30">
 
-            <!-- Device Label -->
-            <Label x:Name="DeviceLabel"
-                   Text="Loading..."
-                   FontSize="22"
-                   FontFamily="Poppins"
-                   TextColor="Gray"
-                   HorizontalOptions="Center" />
+            
 
             <!-- Welcome Text -->
             <Label Text="Welcome to MAUI Food Application 🍽️"
@@ -24,7 +18,8 @@
                    FontFamily="Poppins"
                    TextColor="#ffb452"
                    HorizontalOptions="Center" />
-
+   
+            
             <!-- Card-style Frame -->
             <Frame BackgroundColor="#f9f9f9"
                    CornerRadius="20"
@@ -32,8 +27,6 @@
                    HasShadow="True">
 
                 <VerticalStackLayout Spacing="15">
-                    <!-- Embedded LoginPage -->
-                    <!--<pages:LoginPage />-->
 
                     <!-- Register Button -->
                     <Button Text="Don't have an account? Register"
@@ -42,49 +35,14 @@
                             FontAttributes="Bold"
                             Clicked="OnRegisterClicked" />
 
-                    <!-- Device Information Button -->
-                    <Button Text="Device Information"
-                            BackgroundColor="Transparent"
-                            TextColor="#52fffc"
-                            FontAttributes="Bold"
-                            Clicked="OnDeviceInformationClicked" />
-
-                    <!-- Device Sensors Button -->
-                    <Button Text="Device Sensors"
-                            BackgroundColor="Transparent"
-                            TextColor="DarkViolet"
-                            FontAttributes="Bold"
-                            Clicked="OnDeviceSensorsClicked" />
-
-                    <!-- Invoke Platform Code Button -->
-                    <Button Text="InvokePlatformCode"
-                            BackgroundColor="Transparent"
-                            TextColor="#008000"
-                            FontAttributes="Bold"
-                            Clicked="OnInvokePlatformCodeClicked" />
-
-                    <local:NativeLabel FontSize="20" TextColor="Blue" />
-                    <!-- Permissions Button -->
-                    <Button Text="Permissions"
-         BackgroundColor="Transparent"
-         TextColor="DarkViolet"
-         FontAttributes="Bold"
-         Clicked="OnPermissionsClicked" />
-                    
-                    <!--Preferences Button-->
-                    <Button Text="Preferences"
-BackgroundColor="Transparent"
-TextColor="Black"
-FontAttributes="Bold"
-Clicked="OnPreferencesClicked" />
-
-                    <!--Settings Button-->
-                    <Button Text="Settings"
-BackgroundColor="Transparent"
-TextColor="Black"
-FontAttributes="Bold"
-Clicked="OnSettingsClicked" />
-
+                    <!--<local:NativeLabel FontSize="20" TextColor="Blue" />
+                    --><!-- Device Label --><!--
+                    <Label x:Name="DeviceLabel"
+                        Text="Loading..."
+                        FontSize="22"
+                        FontFamily="Poppins"
+                        TextColor="Gray"
+                        HorizontalOptions="Center" />-->       
                 </VerticalStackLayout>
 
             </Frame>

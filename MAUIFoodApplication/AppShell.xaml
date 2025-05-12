@@ -1,17 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="MAUIFoodApplication.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MAUIFoodApplication"
-    Shell.FlyoutBehavior="Disabled"
     Title="MAUIFoodApplication">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-    <!--<ShellContent Title="Register" ContentTemplate="{DataTemplate local:RegisterPage}" Route="RegisterPage" />-->
-    <ShellContent Title="DeviceInformation" ContentTemplate="{DataTemplate local:DeviceInformation}" Route="DeviceInformation" />
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Device Information">
+        <ShellContent ContentTemplate="{DataTemplate local:DeviceInformation}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Device Sensors">
+        <ShellContent ContentTemplate="{DataTemplate local:DeviceSensors}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Invoke Platform Code" Route="InvokePlatformCodePage">
+        <ShellContent ContentTemplate="{DataTemplate local:InvokePlatformCode}" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Permissions">
+        <ShellContent ContentTemplate="{DataTemplate local:PermissionPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Preferences">
+        <ShellContent ContentTemplate="{DataTemplate local:PreferencesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings">
+        <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+    </FlyoutItem>
 
 </Shell>

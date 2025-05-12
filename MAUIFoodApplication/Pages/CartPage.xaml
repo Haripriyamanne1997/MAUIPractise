@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MAUIFoodApplication.Models"
+             x:Class="MAUIFoodApplication.Pages.CartPage"
+             Title="My Cart">
+
+    <VerticalStackLayout Padding="10">
+
+        <!-- Title -->
+        <Label Text="Cart Summary"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10" />
+
+        <!-- Cart Items -->
+        <CollectionView ItemsSource="{Binding CartItems}" Margin="0,10">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="15" Padding="10" Margin="5" HasShadow="True" BackgroundColor="White">
+                        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+
+                            <!-- Item Image -->
+                            <Image Source="{Binding ImageUrl}" WidthRequest="80" HeightRequest="80" Aspect="AspectFill" Grid.RowSpan="2" Margin="5" />
+
+                            <!-- Item Name -->
+                            <Label Text="{Binding Name}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   Grid.Column="1"
+                                   TextColor="Black"
+                                   VerticalOptions="Start" />
+
+                            <!-- Remove from Cart -->
+                            <ImageButton Source="delete.png"
+                                         Grid.Column="2"
+                                         BackgroundColor="Transparent"
+                                         WidthRequest="25"
+                                         HeightRequest="25"
+                                         VerticalOptions="Start"
+                                         Clicked="OnRemoveItemClicked"
+                                         BindingContext="{Binding .}" />
+
+                            <!-- Price and Quantity -->
+                            <StackLayout Orientation="Horizontal"
+                                         Grid.Row="1"
+                                         Grid.Column="1"
+                                         Spacing="10"
+                                         VerticalOptions="End">
+
+                                <Label Text="{Binding Price, StringFormat='₹{0:F2}'}"
+                                       FontSize="16"
+                                       TextColor="Green"
+                                       VerticalOptions="Center" />
+
+                                <StackLayout Orientation="Horizontal" Spacing="5">
+                                    <Button Text="−" WidthRequest="35" Clicked="OnDecreaseQuantityClicked" BindingContext="{Binding .}" />
+                                    <Label Text="{Binding Quantity}" VerticalOptions="Center" />
+                                    <Button Text="+" WidthRequest="35" Clicked="OnIncreaseQuantityClicked" BindingContext="{Binding .}" />
+                                </StackLayout>
+                            </StackLayout>
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Total and Checkout -->
+        <StackLayout Margin="10,20,10,0" Spacing="10">
+            <Label Text="{Binding TotalAmount, StringFormat='Total: ₹{0:F2}'}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="DarkGreen"
+                   HorizontalOptions="End" />
+
+            <Button Text="Place Order"
+                    BackgroundColor="Purple"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="10"
+                    FontAttributes="Bold"
+                    Clicked="OnPlaceOrderClicked" />
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
